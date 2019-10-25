@@ -1,29 +1,53 @@
 
         .div-1 {
-            color: white;
+            color: #b5f5ec;
             text-align: center;
             background-color: #08979c;
-            height: 40px;
-            padding-top: 8px;
-            padding-bottom: 8px;
+            
+        }
+        #footer{  color: #b5f5ec;
+            text-align: center;
+            background-color: #08979c;
+            line-height: 60px;
+        }
+        #logo {
+            width: 16px;
+            height: 16px;
+            line-height: 60px;
+            vertical-align: middle;
         }
 
+        #header-title {
+            vertical-align: middle;
+            line-height: 64px;
+            height: 32px;
+            font-size: 16px;
+        }
+        #div{ background-color: #87e8de;}
+
          .div-l{float: left;
-            font-weight: bold;
             vertical-align: top;
-            width: 15%;
-            height: 0px;
+            position: sticky;top: 0;
+            overflow: auto;
+            
+            width: 10%;
             background-color: #87e8de;
             margin-right: 0px;
-           
+            font-size: 12px;
+            color: #002766;
+            font-weight: bold;
         }
-        .div-r{float: right;
+        
+      .div-r{float: right;
           width: 85%;
           background-color: #b5f5ec;
-          padding-inline-start: 15px;
-          padding-inline-end: 15px;
-          text-indent: 35px
+          padding-inline-start: 2.5%;
+          padding-inline-end: 2.5%;
         }
+        .div-r p{ text-indent: 35px}
+
+        .div-r h4{
+        margin: 0;}
 
         .clear{ clear:both} 
 
@@ -32,20 +56,23 @@
             width: 60%;
             margin: 0 auto;   /*水平居中*/
             margin-top: 5%;
+            
         }
-       table>td{
-           text-align:center;
-       }
+
 
         .tr td::before {content:"￥";}
 
         .img {
-            margin: 0 auto;
+            max-width: 50%;/* 图片最大为原始图片的50%*/
+            width: 100px;
+           
             display: block;
-            width: 40%
+            
         }
   
-       html, body {
+        body {
+           width: 100%;
+           height: 100%;
             margin: 0;
             padding: 0;
         }
@@ -55,13 +82,19 @@
         ul {float: left;
             margin: 0;
             padding: 0;
-            width: 15%;
-            position: fixed;
-            height: 40%;
-            overflow: auto;
+            width: 100%;
+            
             
         }
-        
+
+        li{
+            text-align: center;
+            border-bottom: 1px solid #595959;
+        }
+
+        li:last-child {
+            border-bottom: none;
+        }
 
         li a {
             display: block;
@@ -71,16 +104,20 @@
             background-color: #87e8de;
         }
        
-        li a.active { 
-            background-color: #4CAF50;
-            color: gray;
-        }
        /*鼠标悬停变色 */
-        li a:hover:not(.active) {
+        li a:hover {
             background-color: black;
             color: #87e8de;
         }
 
+        /*鼠标点击时变色 */
+        li a:active
+        {
+	background-color:white;
+        }
+     
+    
+       /*首字符大写*/
         #fp:first-letter {
             font-size: 32px;
             font-weight: bold;
