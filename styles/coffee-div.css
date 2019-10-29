@@ -25,11 +25,10 @@
         }
         #div{ background-color: #87e8de;}
 
-         .div-l{float: left;
+         #div-l{float: left;
             vertical-align: top;
-            position: sticky;top: 0;
-            overflow: auto;
-            
+           top:0px;
+           left: 0px;
             width: 10%;
             background-color: #87e8de;
             margin-right: 0px;

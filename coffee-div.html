@@ -20,7 +20,7 @@
     
     </div>
     <div id="div">
-        <div class="div-l">
+        <div id="div-l">
             <ul>
                 <li><a href="#Na">拿铁</a></li>
                 <li><a href="#Ka">卡布奇诺</a></li>
@@ -87,7 +87,24 @@
         版权所有@xlb
 
     </div>
+<!---->
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
 
+    <script>
+        $(document).ready(function(){
+            $(window).scroll(function
+            (event){
+                var scrollTop=$(window).scrollTop();
+                var menuTop=$('.div-1').height();
+                if (scrollTop >=menuTop){
+                    $('#div-l').css('position','fixed');  /*用js和fixed实现sticky时，在css中必须设置top和left的值为0px */
+                }else{
+                    $('#div-l').css('position','');
+                }
+                console.log('event',scrollTop,menuTop);
+            })
+        })
+    </script>
 
 </body>
 
