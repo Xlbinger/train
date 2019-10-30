@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>弹幕墙</title>
+    <style>
+        #qiang {
+            height: 210px;
+            font-size: 14px;
+           
+            margin: 0 auto;
+        }
+
+        #btn {
+            text-align: center;
+            margin: 0 auto;
+            padding: 100px;
+        }
+
+        #text {
+            position: absolute;
+        }
+
+        #scr {
+            width: 100%;
+            height: 210px;
+            border: 1px solid rgb(229, 229, 229);
+            font-size: 14px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="qiang">
+       
+        <div id="scr">
+<div id="show"></div>
+        </div>
+    </div>
+    <div id="btn">
+        <input placeholder="输入弹幕" id="input" type="text">
+        <button id="send">发送</button>
+        <button id="clear">清屏</button>
+    </div>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            /*发送弹幕*/
+            $('#send').click(function () {
+                var danmutext = $("#input").val(); //获取输入值
+                //$("#input").val("");  //input 清零
+                console.log(danmutext);
+
+                var $qiang = $('<div id="text">' + danmutext + '</div>');
+                //字体随机颜色
+                var r = Math.floor(Math.random() * 256);
+                var g = Math.floor(Math.random() * 256);
+                var b = Math.floor(Math.random() * 256);
+                //字体随机大小
+                var f = Math.floor(Math.random() * 40);
+
+                $screen = $(document.getElementById("scr"));
+                var top = Math.random() * $screen.height() + 0;
+                $qiang.css({
+                    top: top + 1+"px",
+                    right: 40,
+                    color: "rgb(" + r + "," + g + "," + b + ")",
+                    fontSize: f + "px"
+                });
+
+                $('#show').append($qiang);
+                $qiang.animate({
+                    right: $screen.width() + 80 - $qiang.width()
+                }, 8000, function () {
+                    $(this).remove();
+                });
+            });
+            $('#clear').click(function () {
+                $('#show').empty();
+            });
+
+        });
+    </script>
+</body>
+
+</html>
