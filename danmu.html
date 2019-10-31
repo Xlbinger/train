@@ -9,13 +9,15 @@
     <style>
         #qiang {
             font-size: 14px;
-            margin: 0 auto;
+            padding-left:80px ;
+            padding-right: 80px;
+            padding-top: 40px;
         }
 
         #btn {
             text-align: center;
             margin: 0 auto;
-            padding: 50px;
+            padding: 20px;
         }
 
         #text {
@@ -23,11 +25,10 @@
         }
 
         #scr {
-            width: 90%;
+            width: 100%;
             height: 400px;
-            border: 1px solid rgb(229, 229, 229);
+            border: 2px solid rgb(229, 229, 229);
             font-size: 14px;
-            margin: 0 auto;
         }
     </style>
 </head>
@@ -60,20 +61,22 @@
                 var b = Math.floor(Math.random() * 256);
                 //字体随机大小
                 var f = Math.floor(Math.random() * 40);
+                //速度大小
+                var speed = Math.floor(Math.random() * 20000);
 
                 $screen = $(document.getElementById("scr"));
-                var top = Math.random() * $screen.height();
+                var top = Math.random() * ($screen.height()-40);
                 $qiang.css({
-                    top: top + 0 + "px",
-                    right: 60,
+                    top: top +42 + "px",
+                    right: 84,
                     color: "rgb(" + r + "," + g + "," + b + ")",
                     fontSize: f + "px"
                 });
 
                 $('#show').append($qiang);
                 $qiang.animate({
-                    right: $screen.width() + 60 - $qiang.width()
-                }, 8000, function () {
+                    right: $screen.width() + 80 - $qiang.width()
+                }, speed, function () {
                     $(this).remove();
                 });
             });
