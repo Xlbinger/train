@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>axios Example</title>
+</head>
+<body>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        axios.get('http://mock-api.com/wnap3Rg1.mock/products')
+        .then(function(res){
+            console.log('res',res);
+        })
+        .catch(function(err){
+            console.log('err',err);
+        })
+    </script>
+</body>
+</html>

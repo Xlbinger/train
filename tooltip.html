@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>导航栏</title>
+
+    <style>
+        #ul-1 {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 200px;
+            background-color: #f1f1f1;
+        }
+
+        #ul-1 li a {
+            display: block;
+            color: #000;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+
+        #ul-2 {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        #ul-2 li {
+            float: left;
+        }
+
+        #ul-2 li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        #ul-2 .active{background-color: blue; color: black;}
+    </style>
+</head>
+
+<body>
+    <ul id="ul-1">
+        <li><a href="#home">主页</a></li>
+        <li><a href="#news">新闻</a></li>
+        <li><a href="#contact">联系</a></li>
+        <li><a href="#about">关于</a></li>
+    </ul>
+    <br>
+    <ul id="ul-2">
+        <li><a class="active" href="#home">主页</a></li>
+        <li><a href="#news">新闻</a></li>
+        <li><a href="#contact">联系</a></li>
+        <li><a href="#about">关于</a></li>
+    </ul>
+
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function () {
+           /*悬停变色*/ 
+           $("#ul-1 li a").hover(function () {
+                $(this).css("background-color", "yellow");
+            }, function () {
+                $(this).css("background-color", " #f1f1f1");
+            });
+            /*鼠标点击变色*/
+            $("#ul-1 li a").mousedown(function(){
+    $(this).css("background-color","blue");
+  });
+  /*悬停变色*/ 
+            $("#ul-2 li a").hover(function () {
+                $(this).css("background-color", "yellow");
+            }, function () {
+                $(this).css("background-color", " #333");
+            });
+             /*鼠标点击变色*/
+             $("#ul-2 li a").click(function(){
+              $("#ul-2 li a").removeClass("active");
+              $(this).addClass("active");
+	})
+
+        });
+    </script>
+</body>
+
+</html>

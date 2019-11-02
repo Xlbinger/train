@@ -68,14 +68,14 @@
                 var top = Math.random() * ($screen.height()-40);
                 $qiang.css({
                     top: top +42 + "px",
-                    right: 84,
+                    right: 86,
                     color: "rgb(" + r + "," + g + "," + b + ")",
                     fontSize: f + "px"
                 });
-
+                //弹幕最大值+展示区最大值(top)+padding-top+上下边框值=qiang的最大高度值
                 $('#show').append($qiang);
                 $qiang.animate({
-                    right: $screen.width() + 80 - $qiang.width()
+                    right: $screen.width() + 84 - $qiang.width()
                 }, speed, function () {
                     $(this).remove();
                 });
