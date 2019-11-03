@@ -84,7 +84,7 @@
         #div-middle h3 {
             display: block;
             text-align: center;
-            
+
         }
 
         #div-middle img {
@@ -92,11 +92,13 @@
             height: 400px;
         }
 
-        #div-middle table tr td {width: 600px;height: 400px;
-         
+        #div-middle table tr td {
+            width: 600px;
+            height: 400px;
+
         }
 
-       
+
         #div-middle table tr td p {
             text-indent: 35px;
             padding-left: 20px;
@@ -112,102 +114,139 @@
             text-align: center;
             padding-top: 20px;
         }
-        #div-bottom{  width: 100%;
+
+        #div-bottom {
+            width: 100%;
             background-color: #bfbfbf;
             height: 400px;
-            }
+            padding-left: 100px;
+            padding-top: 50px;
+            vertical-align: middle;
+        }
+       
+        #div-bottom img {
+            width: 100px !important;
+            height: 100px;
+        }
+        #div-bottom table tr td {
+            padding-left: 50px;
+            text-align: center;
+        }
     </style>
 
 </head>
 
 <body>
-    <div style="background-color: #bfbfbf;">
-        <div id="top">
-            <img src="images/top-logo.png" alt="" width="24px" height="24px">
-            <span> 动漫简介</span>
+    <div style="width: 1500px;margin: 0 auto;">
+        <div style="background-color: #bfbfbf;">
+            <div id="top">
+                <img src="images/top-logo.png" alt="" width="24px" height="24px">
+                <span> 动漫简介</span>
 
 
+                <table>
+                    <tr>
+                        <th><a href="">首页</a> </th>
+                        <th><a href="">新闻</a> </th>
+                        <th><a href="../danmu.html">弹幕</a> </th>
+                        <th><a href="">关于我们</a> </th>
+                    </tr>
+                </table>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <!--轮播图-->
+        <div id="div-content">
+            <div id="myCarousel" class="carousel slide">
+                <!-- 轮播（Carousel）指标 -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+                <!-- 轮播（Carousel）项目 -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="images/lb-1.jpg" alt="First slide">
+                    </div>
+                    <div class="item">
+                        <img src="images/lb-2.jpg" alt="Second slide">
+                    </div>
+                    <div class="item">
+                        <img src="images/lb-3.jpeg" alt="Third slide">
+                    </div>
+                </div>
+                <!-- 轮播（Carousel）导航 -->
+                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+        <!--人物介绍-->
+        <div id="div-middle">
+            <h3>人物介绍</h3>
             <table>
                 <tr>
-                    <th><a href="">首页</a> </th>
-                    <th><a href="">新闻</a> </th>
-                    <th><a href="../danmu.html">弹幕</a> </th>
-                    <th><a href="">关于我们</a> </th>
+                    <td><img src="images/路飞.jpg" alt=""></td>
+                    <td>
+                        <h3>蒙奇·D·路飞</h3>
+                        <p>蒙奇·D·路飞，日本漫画《航海王》及其衍生作品中的主角，外号“草帽”路飞，草帽一伙、
+                            草帽大船团船长，极恶的世代之一。橡胶果实能力者的橡胶人，悬赏金15亿贝里。梦想是找到
+                            传说中的One Piece，成为海贼王。
+                        </p>
+                        <p>路飞性格积极乐观，爱憎分明，而且十分重视伙伴，不甘屈居于他人之下，对任何危险的
+                            事物都超感兴趣。和其他传统的海贼所不同的是，他并不会为了追求财富而杀戮，而是享
+                            受着身为海贼的冒险和自由。</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3>蒙奇·D·路飞</h3>
+                        <p>蒙奇·D·路飞，日本漫画《航海王》及其衍生作品中的主角，外号“草帽”路飞，草帽一伙、
+                            草帽大船团船长，极恶的世代之一。橡胶果实能力者的橡胶人，悬赏金15亿贝里。梦想是找到
+                            传说中的One Piece，成为海贼王。
+                        </p>
+                        <p>路飞性格积极乐观，爱憎分明，而且十分重视伙伴，不甘屈居于他人之下，对任何危险的
+                            事物都超感兴趣。和其他传统的海贼所不同的是，他并不会为了追求财富而杀戮，而是享
+                            受着身为海贼的冒险和自由。</p>
+                    </td>
+                    <td><img src="images/路飞.jpg" alt=""></td>
                 </tr>
             </table>
         </div>
-        <div class="clear"></div>
-    </div>
-    <!--轮播图-->
-    <div id="div-content">
-        <div id="myCarousel" class="carousel slide">
-            <!-- 轮播（Carousel）指标 -->
-            <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>
-            </ol>
-            <!-- 轮播（Carousel）项目 -->
-            <div class="carousel-inner">
-                <div class="item active">
-                    <img src="images/lb-1.jpg" alt="First slide">
-                </div>
-                <div class="item">
-                    <img src="images/lb-2.jpg" alt="Second slide">
-                </div>
-                <div class="item">
-                    <img src="images/lb-3.jpeg" alt="Third slide">
-                </div>
-            </div>
-            <!-- 轮播（Carousel）导航 -->
-            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
+        <!--新闻动态-->
+        <div id="div-news">
+            <h3>新闻动态</h3><br><br><br><br><br>
+        </div>
+        <!--关于我们-->
+        <div id="div-bottom">
+            <table>
+                <tr>
+                    <td><img src="images/地址.png" alt=""></td>
+                    <td><img src="images/邮箱.png" alt=""></td>
+                    <td><img src="images/电话.png" alt=""></td>
+                    <td rowspan="2"><img id="ma" src="images/二维码.png" alt=""></td>
+                </tr>
+                <tr>
+                    <td>
+                        <h4>福州市闽侯县上街镇闽江学院</h4>
+                    </td>
+                    <td>
+                        <h4>1090983403@qq.com</h4>
+                    </td>
+                    <td>
+                        <h4>400-123-4567</h4>
+                    </td>
+                </tr>
+            </table>
+            
         </div>
     </div>
-    <!--人物介绍-->
-    <div id="div-middle">
-        <h3>人物介绍</h3>
-        <table>
-            <tr>
-                <td><img src="images/路飞.jpg" alt=""></td>
-                <td>
-                    <h3>蒙奇·D·路飞</h3>
-                    <p>蒙奇·D·路飞，日本漫画《航海王》及其衍生作品中的主角，外号“草帽”路飞，草帽一伙、
-                        草帽大船团船长，极恶的世代之一。橡胶果实能力者的橡胶人，悬赏金15亿贝里。梦想是找到
-                        传说中的One Piece，成为海贼王。
-                    </p>
-                    <p>路飞性格积极乐观，爱憎分明，而且十分重视伙伴，不甘屈居于他人之下，对任何危险的
-                        事物都超感兴趣。和其他传统的海贼所不同的是，他并不会为了追求财富而杀戮，而是享
-                        受着身为海贼的冒险和自由。</p>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <h3>蒙奇·D·路飞</h3>
-                    <p>蒙奇·D·路飞，日本漫画《航海王》及其衍生作品中的主角，外号“草帽”路飞，草帽一伙、
-                        草帽大船团船长，极恶的世代之一。橡胶果实能力者的橡胶人，悬赏金15亿贝里。梦想是找到
-                        传说中的One Piece，成为海贼王。
-                    </p>
-                    <p>路飞性格积极乐观，爱憎分明，而且十分重视伙伴，不甘屈居于他人之下，对任何危险的
-                        事物都超感兴趣。和其他传统的海贼所不同的是，他并不会为了追求财富而杀戮，而是享
-                        受着身为海贼的冒险和自由。</p>
-                </td>
-                <td><img src="images/路飞.jpg" alt=""></td>
-            </tr>
-        </table>
-    </div>
-    <!--新闻动态-->
-    <div id="div-news">
-        <h3>新闻动态</h3><br><br><br><br><br>
-    </div>
-    <!--关于我们-->
-    <div id="div-bottom"></div>
 </body>
 
 </html>
